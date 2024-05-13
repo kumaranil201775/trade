@@ -1,0 +1,34 @@
+Deployment - 
+Package the application as a JAR file using Maven or Gradle.
+Deploy the application to our preferred environment (e.g., on-premises servers, cloud platforms like AWS, Azure, PCF, or GCP).
+Use Docker for containerization if deploying in a containerized environment.
+Implement CI/CD pipelines for automated builds and deployments.
+
+
+Resiliency - 
+Design the application with scalability in mind, using techniques like caching, load balancing, and horizontal scaling.
+Use asynchronous technique to handle requests like Pub/Sub -> Kafka 
+
+ 
+Database - 
+RDBMS to store trade information as that follows ACID properties to maintain concurrency
+NoSQL like Cassandra for storing stock price that varies time to time as NoSQL database is ever-growing(horizontal scaling), time series and optimized search facilities  
+
+
+Volume of trade requests such as 100K in an hour - 
+Horizontal and vertical scaling as per requirement, deploy application on multiple instances to handle requests and routing through load balancer
+Asynchronous(Pub/Sub) calls to ensure the delivery of messages or handling request 
+
+
+High availability - 
+Multiple instances of application that can serves more requests at a time, 
+Use synchronous and asynchronous calls based on requirements,
+Implementing different design patterns for fault-tolerance like Circuit-breaker pattern 
+
+
+Monitoring system - 
+Use Spring Boot Actuator for monitoring and health checks.
+Integrate with monitoring systems like Prometheus and Grafana if needed.
+
+ 
+

@@ -1,0 +1,35 @@
+endpoint - 
+http://localhost:8080/trade
+
+Request -
+{"tradeId":1,"traderId":"A100","shareId":"S001","shareName":"Tata",
+"shareType":"buy","shareQuantity":5,"sharePrice":1320.20,"shareStatus":"Alloted"}
+
+Response -
+{
+    "tradeId": 1,
+    "traderId": "A100",
+    "shareId": "S001",
+    "shareName": "Tata",
+    "shareType": "buy",
+    "shareQuantity": 5,
+    "sharePrice": 1320.2,
+    "shareStatus": "Alloted",
+    "portfolio": {
+        "id": 1,
+        "traderId": "A100",
+        "portfolioStock": {
+            "id": 1,
+            "stockId": "S001",
+            "quantity": 5,
+            "shareName": "Tata",
+            "shareType": "buy"
+        }
+    },
+    "wallet": {
+        "id": 1,
+        "traderId": "A100",
+        "balance": 1320.2,
+        "totalQuantity": 5
+    }
+}
